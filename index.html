@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Pressure.Deliver® — Minimalist Luxury Apparel Built Under Pressure</title>
+
+  <meta name="description" content="Pressure.Deliver is a minimalist luxury apparel brand. Timeless hoodies and caps designed for those who rise under pressure.">
+
+  <meta name="keywords" content="Pressure Deliver, Pressure.Deliver hoodie, minimalist luxury clothing, premium hoodies, luxury streetwear brand">
+
+  <link rel="canonical" href="https://pressuredeliver.online">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pressure.Deliver® — Built Under Pressure">
+  <meta property="og:description" content="Minimalist luxury apparel for those who rise under pressure.">
+  <meta property="og:image" content="https://pressuredeliver.online/og-image.jpeg">
+  <meta property="og:url" content="https://pressuredeliver.online">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pressure.Deliver® — Built Under Pressure">
+  <meta name="twitter:description" content="Timeless minimalist hoodies and caps.">
+  <meta name="twitter:image" content="https://pressuredeliver.online/og-image.jpeg">
+
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    /* =========================
+       RESET & VARIABLES
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --muted: #666;
+      --border: #e5e5e5;
+      --card: #f7f7f7;
+    }
+
+    [data-theme="dark"] {
+      --bg: #000000;
+      --text: #ffffff;
+      --muted: #aaa;
+      --border: #333;
+      --card: #0f0f0f;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: .5px;
+    }
+
+    .brand img {
+      width: 38px;
+      height: auto;
+    }
+
+    .menu-btn {
+      font-size: 1.6rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: .8rem;
+      position: absolute;
+      top: 70px;
+      right: 15px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      min-width: 180px;
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    nav a, .mode-toggle {
+      padding: .5rem;
+      border-radius: 6px;
+      font-size: .95rem;
+    }
+
+    nav a:hover, .mode-toggle:hover {
+      background: var(--card);
+    }
+
+    @media (min-width: 768px) {
+      .menu-btn { display: none; }
+
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        border: none;
+        background: none;
+        padding: 0;
+        gap: 1.2rem;
+      }
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      color: #fff;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      font-size: 2.3rem;
+      font-weight: 500;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      opacity: .85;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: .9rem 1.8rem;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      font-size: .9rem;
+      transition: .3s;
+    }
+
+    .hero a:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .product {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--card);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.6rem;
+    }
+
+    .product-info h3 {
+      font-weight: 500;
+      margin-bottom: .4rem;
+    }
+
+    .product-info p {
+      font-size: .95rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .product-info a {
+      display: inline-block;
+      padding: .7rem 1.6rem;
+      border-radius: 25px;
+      border: 1px solid var(--text);
+      font-size: .85rem;
+      transition: .3s;
+    }
+
+    .product-info a:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      border-top: 1px solid var(--border);
+      font-size: .85rem;
+      opacity: .8;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.7rem; }
+      .product img { height: 320px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="logo.jpg" alt="Pressure.Deliver">
+    Pressure.Deliver
+  </div>
+
+  <button class="menu-btn" id="menu-btn">☰</button>
+
+  <nav id="nav">
+    <a href="#shop">Shop</a>
+    <a href="about.html">About</a>
+    <button class="mode-toggle" id="mode-toggle">Dark / Light</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Built for those who rise under pressure.</h1>
+    <p>Minimalist luxury apparel. Timeless. Intentional.</p>
+    <a href="#shop">Shop Collection</a>
+  </div>
+</section>
+
+<section id="shop" class="section">
+  <h2>The Collection</h2>
+
+  <div class="product-grid">
+
+    <div class="product">
+      <img src="hoodie.jpeg" alt="Signature Hoodie">
+      <div class="product-info">
+        <h3>Signature Hoodie</h3>
+        <p>Our flagship piece. Heavyweight. Calm confidence.</p>
+        <a href="YOUR_VENDBLUE_HOODIE_LINK">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="cap.jpeg" alt="Classic Dad Cap">
+      <div class="product-info">
+        <h3>Classic Dad Cap</h3>
+        <p>Quiet statement. Everyday authority.</p>
+        <a href="YOUR_VENDBLUE_CAP_LINK">Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Pressure.Deliver
+</footer>
+
+<script>
+  // THEME TOGGLE
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  const toggleBtn = document.getElementById("mode-toggle");
+  toggleBtn.textContent = savedTheme === "dark" ? "Light Mode" : "Dark Mode";
+
+  toggleBtn.onclick = () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    toggleBtn.textContent = next === "dark" ? "Light Mode" : "Dark Mode";
+  };
+
+  // MOBILE MENU
+  const menuBtn = document.getElementById("menu-btn");
+  const nav = document.getElementById("nav");
+
+  menuBtn.onclick = () => {
+    nav.classList.toggle("active");
+  };
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "name": "Pressure.Deliver",
+  "url": "https://pressuredeliver.online",
+  "logo": "https://pressuredeliver.online/logo.jpg",
+  "description": "Minimalist luxury apparel brand focused on hoodies and caps.",
+  "sameAs": [
+    "https://x.com/okami_nalado"
+  ]
+}
+</script>
+
+</body>
+</html>

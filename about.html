@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>About Pressure.Deliver® — Built Under Pressure</title>
+
+  <meta name="description" content="Pressure.Deliver is a minimalist luxury apparel brand founded by Okami Nalado. Designed for those who rise under pressure.">
+
+  <link rel="canonical" href="https://pressuredeliver.online/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Pressure.Deliver®">
+  <meta property="og:description" content="A minimalist luxury apparel brand built for those who rise under pressure.">
+  <meta property="og:image" content="https://pressuredeliver.online/og-image.jpeg">
+  <meta property="og:url" content="https://pressuredeliver.online/about.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    /* =========================
+       RESET & VARIABLES
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --muted: #666666;
+      --border: #e5e5e5;
+      --card: #f7f7f7;
+    }
+
+    [data-theme="dark"] {
+      --bg: #000000;
+      --text: #ffffff;
+      --muted: #aaaaaa;
+      --border: #333333;
+      --card: #0f0f0f;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: .3s;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-weight: 600;
+      letter-spacing: .4px;
+    }
+
+    .logo-img {
+      width: 38px;
+      height: auto;
+    }
+
+    .menu-btn {
+      font-size: 1.6rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: .8rem;
+      position: absolute;
+      top: 70px;
+      right: 15px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      min-width: 180px;
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    nav a,
+    .mode-toggle {
+      padding: .5rem;
+      border-radius: 6px;
+      font-size: .95rem;
+    }
+
+    nav a:hover,
+    .mode-toggle:hover {
+      background: var(--card);
+    }
+
+    @media (min-width: 768px) {
+      .menu-btn { display: none; }
+
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        border: none;
+        background: none;
+        padding: 0;
+        gap: 1.2rem;
+      }
+    }
+
+    /* =========================
+       CONTENT
+    ========================= */
+    .section {
+      max-width: 820px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-weight: 500;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: .8rem 1.8rem;
+      border-radius: 30px;
+      border: 1px solid var(--text);
+      font-size: .85rem;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      border-top: 1px solid var(--border);
+      font-size: .85rem;
+      opacity: .8;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.7rem; }
+      .section { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="logo.jpg" class="logo-img" alt="Pressure.Deliver logo">
+    <span>Pressure.Deliver</span>
+  </div>
+
+  <button class="menu-btn" id="menu-btn">☰</button>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#shop">Shop</a>
+    <a href="about.html">About</a>
+    <button id="mode-toggle" class="mode-toggle">Dark / Light</button>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>About Pressure.Deliver</h1>
+
+  <p>
+    Pressure.Deliver is a minimalist luxury apparel brand founded by
+    <strong>Okami Nalado</strong>, also known as <strong>The Head</strong>.
+    The brand was created from a simple belief — pressure is not something
+    to escape, but something to rise through.
+  </p>
+
+  <p>
+    In a world filled with noise, Pressure.Deliver focuses on restraint.
+    Every piece is intentional. Every design is clean, timeless, and built
+    to carry meaning without explanation.
+  </p>
+
+  <p>
+    The brand currently offers a focused collection — a signature hoodie
+    and a classic cap — designed as identity pieces rather than seasonal
+    fashion.
+  </p>
+
+  <p>
+    Pressure.Deliver is not about excess.
+    It is about clarity.
+    About delivering — under pressure.
+  </p>
+
+  <a href="index.html#shop" class="btn">View Collection</a>
+</section>
+
+<footer>
+  © 2026 Pressure.Deliver
+</footer>
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "name": "Pressure.Deliver",
+  "url": "https://pressuredeliver.online",
+  "logo": "https://pressuredeliver.online/logo.jpg",
+  "description": "Minimalist luxury apparel brand focused on hoodies and caps.",
+  "founder": {
+    "@type": "Person",
+    "name": "Okami Nalado"
+  },
+  "sameAs": [
+    "https://x.com/okami_nalado"
+  ]
+}
+</script>
+
+<script>
+  // THEME TOGGLE
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  const toggleBtn = document.getElementById("mode-toggle");
+  toggleBtn.textContent = savedTheme === "dark" ? "Light Mode" : "Dark Mode";
+
+  toggleBtn.onclick = () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    toggleBtn.textContent = next === "dark" ? "Light Mode" : "Dark Mode";
+  };
+
+  // MOBILE MENU
+  const menuBtn = document.getElementById("menu-btn");
+  const nav = document.getElementById("nav");
+
+  menuBtn.onclick = () => {
+    nav.classList.toggle("active");
+  };
+</script>
+
+</body>
+</html>
